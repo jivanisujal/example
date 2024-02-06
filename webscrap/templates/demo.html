@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token%}
+        <table border="1">
+            <tr>
+                <td>Enter URL:</td>
+                <td><input type="text" name="url" id=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="send" value="Get Data" id=""></td>
+            </tr>
+        </table>
+    </form>
+    {% for row in data%}
+    <h3>{{row}}</h3>
+    {% endfor%}
+</body>
+</html>
